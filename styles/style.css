@@ -15,7 +15,6 @@ body {
     align-items: center;
 }
 img {
-    max-width: 500px;
     min-width: 5px;
 }
 a {
@@ -56,6 +55,7 @@ li {
     background-color: black;
     padding: 8px 24px;
 }
+/* SubTop */
 .header .sub-top {
     display: grid;
     grid-template-columns: repeat(3, minmax(50px, calc(100vw / 3)));
@@ -80,6 +80,7 @@ li {
     background-color: white;
     padding-right: 60px;
 }
+/* Menu */
 .header .menu {
     background-color: black;
 }
@@ -96,8 +97,10 @@ li {
     opacity: .5;
     scale: 1.1;
 }
+/* SubMenu */
 .header .sub-menu {
     width: 100vw;
+    margin: auto;
 }
 .header .sub-menu ul {
     display: flex;
@@ -106,15 +109,14 @@ li {
     align-items: center;
     gap: 0.5rem;
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
 }
 .header .sub-menu ul li a {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 6.25rem;
-    height: 6.25rem;
+    min-width: 100px;
+    line-height: 100px;
+    text-align: center;
     border-radius: 4px;
     box-shadow: 1px 1px 3px black;
     color: rgb(124, 123, 123);;
@@ -127,10 +129,16 @@ li {
     scale: 1.1;
 }
 /* Main */
+.main {
+    width: 100vw;
+}
 .main .banner {
     position: relative;
+    max-width: 100%;
 }
-.main .banner #img {}
+.main .banner #img {
+    width: 100%;
+}
 .main .banner .info {
     color: #fff;
     position: absolute;
@@ -138,8 +146,6 @@ li {
 .main .banner .info p {
     width: 24ch;
 }
-
-
 
 
 /* Footer */
