@@ -51,6 +51,9 @@ li {
 .header .top .news .social {
     height: 24px;
 }
+.header .top .news .social svg:hover {
+    opacity: .5;
+}
 .header .top .news .gift {
     background-color: black;
     padding: 8px 24px;
@@ -83,6 +86,21 @@ li {
 /* Menu */
 .header .menu {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .menu .menu-mobile {
+    display: none;
+    cursor: pointer;
+    width: fit-content;
+    padding: 2px;
+}
+.header .menu .menu-mobile div {
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    margin: 8px;
 }
 .header .menu ul {
     display: flex;
@@ -90,18 +108,14 @@ li {
     justify-content: center;
     gap: 32px;
 }
-.header .menu ul li a {
+.header .menu #menu li a {
     line-height: 32px;
 }
-.header .menu ul li a:hover {
-    opacity: .5;
-    scale: 1.1;
+.header .menu #menu li a:hover {
+    color: grey;
 }
 /* SubMenu */
-.header .sub-menu {
-    width: 100vw;
-    margin: auto;
-}
+.header .sub-menu {}
 .header .sub-menu ul {
     display: flex;
     flex-wrap: wrap;
@@ -130,7 +144,7 @@ li {
 }
 /* Main */
 .main {
-    width: 100vw;
+    width: 100%;
 }
 .main .banner {
     position: relative;
@@ -155,9 +169,10 @@ li {
     grid-template-columns: 1fr;
     justify-content: center;
     text-align: center;
+    width: 100%;
 }
 .footer .banner {
-    width: 100vw;
+    width: 100%;
     height: 120px;
     background-color: rgb(124, 123, 123);
     position: relative;
@@ -173,7 +188,7 @@ li {
     grid-template-columns: repeat(3, minmax(100px, calc(100vw / 3)));   
     
     color: white;
-    width: 100vw;
+    width: 100%;
 }
 .footer .info .ble-bg {
     display: flex;
@@ -241,7 +256,7 @@ li {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    width: 100vw;
+    width: 100%;
     background-color:  rgb(26, 25, 25);
     color: rgb(204, 204, 204);
     gap: 10px;
@@ -252,7 +267,7 @@ li {
         grid-template-rows: 1fr;
     }
     .footer .info {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         padding: 0;
     }
     .footer .info .ble {
@@ -260,7 +275,7 @@ li {
         text-align: center;
         padding: 32px;
         background-color:  rgb(26, 25, 25);
-        width: 100vw;
+        width: 100%;
     }
     .footer .info .ble .logo,
     .footer .info .ble .social {
@@ -270,14 +285,12 @@ li {
         text-align: center;
     }
     .footer .info .links {
-        width: 100vw;
+        width: 100%;
         grid-row: 2;
         margin: 32px 0;
     }
     .footer .info .links .links-group {
         width: 150px;
-        display: grid;
-        justify-content: center;
     }
     .footer .info .call {
         grid-row: 3;
@@ -317,14 +330,36 @@ li {
     .header .top .news .social {
         justify-content: center;
     }
-    .header .menu ul {
+    .header .menu {
+        min-height: 48px;
+        position: relative;
+    }
+    .header .menu .menu-mobile {
+        place-self: start;
+        position: absolute;
+        display: block;
+        top: 4px;
+        right: 20px;
+        z-index: 2;
+    }
+    #menu {
+        display: none;
+    }
+    #menu.active {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 0;
     }
-    .header .menu ul li a {
+    .header .menu #menu li {
+
+    }
+    .header .menu #menu li a {
         display: flex;
-        justify-content: center;
         line-height: 48px;
+        background-color: black;
+        width: 90vw;
+        z-index: 2;
     }
 }
 @media (max-width: 400px) {
@@ -335,5 +370,11 @@ li {
     .footer .info .links {
         display: grid;
         align-items: start;
+    }
+}
+@media (max-width: 300px) {
+    .footer .info .links {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
