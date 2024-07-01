@@ -160,12 +160,42 @@ li {
     position: relative;
     width: 100%;
 }
-.main .banner #img {
+.main .banner-img {
     width: 100%;
 }
-.main .banner .info {}
-.main .banner .info p {
+.main .banner .banner-info {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px black;
+    max-width: 48ch;
+}
+.main .banner .banner-info span {
+    text-transform: uppercase;
+}
+.main .banner .banner-info .banner-logo {
+    max-width: 200px;
+}
+.main .banner .banner-info h2 {}
+.main .banner .banner-info p {
     width: 24ch;
+}
+.main .banner .banner-info a {
+    background-color: black;
+    text-transform: uppercase;
+    text-align: center;
+    width: 200px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.main .banner .banner-info a:hover {
+    scale: 1.1;
+    opacity: .9;
 }
 
 
@@ -380,6 +410,11 @@ li {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+@media (max-width: 500px) {
+    .main .banner .banner-info a {
+        display: none;
+    }
+}
 @media (max-width: 400px) {
     .header .sub-top .call {
         flex-direction: column;
@@ -387,6 +422,9 @@ li {
     }
     .header .sub-menu ul {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .main .banner .banner-info span {
+        display: none;
     }
     .footer .info .links {
         display: grid;
