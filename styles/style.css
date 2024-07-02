@@ -29,7 +29,7 @@ li {
 .footer, 
 .copy-right{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
 }
 /* .header {} */
 .header .top {
@@ -166,7 +166,7 @@ li {
 .main .banner .banner-info {
     position: absolute;
     top: 50%;
-    left: 32px;
+    left: 64px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -179,7 +179,7 @@ li {
     text-transform: uppercase;
 }
 .main .banner .banner-info .banner-logo {
-    max-width: 200px;
+    max-width: 300px;
 }
 .main .banner .banner-info h2 {}
 .main .banner .banner-info p {
@@ -359,6 +359,12 @@ li {
     .header .sub-menu ul {
         grid-template-columns: repeat(5, 1fr);
     }
+    .main .banner .banner-info {
+        left: 32px;
+    }
+    .main .banner .banner-info .banner-logo {
+        max-width: 200px;
+    }
     .footer .info {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -411,8 +417,11 @@ li {
     }
 }
 @media (max-width: 500px) {
-    .main .banner .banner-info a {
+    .main .banner .banner-info span {
         display: none;
+    }
+    .main .banner .banner-info h2 {
+        font-size: 1rem;
     }
 }
 @media (max-width: 400px) {
@@ -423,8 +432,11 @@ li {
     .header .sub-menu ul {
         grid-template-columns: repeat(3, 1fr);
     }
-    .main .banner .banner-info span {
-        display: none;
+    .main .banner .banner-info .banner-logo {
+        max-width: 150px;
+    }
+    .main .banner .banner-info h2 {
+        font-size: 1rem;
     }
     .footer .info .links {
         display: grid;
