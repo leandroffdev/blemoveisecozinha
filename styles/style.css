@@ -191,7 +191,7 @@ li {
     text-align: center;
     width: 200px;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 .main .banner .banner-info a:hover {
     scale: 1.1;
@@ -214,6 +214,9 @@ li {
     text-align: center;
     max-width: 64ch;
 }
+.main .about-info .about-title {
+    font-size: 2rem;
+}
 .main .about-info .about-subtitle {
     text-transform: uppercase;
 }
@@ -230,6 +233,54 @@ li {
     text-align: center;
     gap: 20px;
     max-width: 32ch;
+}
+.main .custom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.main .custom .custom-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: #bdbbbb;
+}
+.main .custom .custom-item img {
+    width: 100%;
+}
+.main .custom .custom-item + .custom-item {
+    padding: 32px;
+    gap: 20px;
+}
+.main .custom .custom-item .custom-main h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+.main .custom .custom-item .custom-main span {
+    text-transform: uppercase;
+}
+.main .custom .custom-item .custom-main {
+    width: fit-content;
+    text-align: end;
+}
+.main .custom .custom-item .custom-text {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.main .custom .custom-item ul li {
+    list-style-type: square;
+}
+.main .custom .custom-item a {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 200px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
 }
 
 
@@ -403,6 +454,13 @@ li {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+    .main .custom {
+        width: 100%;
+        grid-template-columns: repeat(1, 100%);
+    }
+    .main .custom .custom-item .custom-text {
+        grid-template-columns: repeat(1, 100%);
     }
     .footer .info {
         grid-template-columns: repeat(1, 1fr);
