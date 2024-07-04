@@ -251,7 +251,7 @@ li {
     width: 100%;
 }
 .main .custom .custom-item + .custom-item {
-    padding: 32px;
+    padding: 64px;
     gap: 20px;
 }
 .main .custom .custom-item .custom-main h2 {
